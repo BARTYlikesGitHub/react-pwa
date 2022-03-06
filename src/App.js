@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import { fetchWeather } from "./api/fetchWeather";
-import "./App.css";
+import { fetchWeather } from "./api/fetchWeather"
+import "./App.css"
 
 const App = () => {
-  const [query, setQuery] = useState("");
-  const [weather, setWeather] = useState({});
+  const [query, setQuery] = useState("")
+  const [weather, setWeather] = useState({})
 
   const search = async (e) => {
     if (e.key === "Enter") {
-      const data = await fetchWeather(query);
+      const data = await fetchWeather(query)
       console.log(data);
       // Tutorial says to get { data },
       // however need to access a deeper level { data.data }
       setWeather(data.data);
       setQuery("");
-      console.log("weather desc");
+      console.log("weather desc")
     }
-  };
+  }
 
   return (
     <div className="main-container">
@@ -50,7 +50,7 @@ const App = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
