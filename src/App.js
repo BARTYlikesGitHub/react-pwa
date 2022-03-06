@@ -15,7 +15,7 @@ const App = () => {
       // however need to access a deeper level { data.data }
       setWeather(data.data);
       setQuery("");
-      console.log("weather desc")
+      console.log("weather desc");
     }
   };
 
